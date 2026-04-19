@@ -171,8 +171,8 @@ slideshow_images = [(f, c) for f, c in slideshow_images if (SLIDE_DIR / f).exist
 
 # --- HEADER ---
 st.page_link("app.py", label="⬅️ Back to Main Page", icon="🏠")
-st.markdown("# 📸 Professional Highlights")
-st.markdown("*A visual journey through key career moments — Dhairya Dosi*")
+st.markdown("# 📸 Pictures that Capture My Interest")
+st.markdown("*A visual journey and memories — Dhairya Dosi*")
 st.markdown("---")
 
 if not slideshow_images:
