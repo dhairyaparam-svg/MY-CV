@@ -48,6 +48,10 @@ st.markdown("""
     html, body, [class*="st-"] {
         font-family: 'Inter', sans-serif;
         color: #e6edf3 !important;
+        scroll-behavior: smooth;
+    }
+    .main, [data-testid="stAppViewContainer"], [data-testid="stVerticalBlockBorderWrapper"] {
+        scroll-behavior: smooth;
     }
     .main p, .main li, .main span, .main div,
     .main h1, .main h2, .main h3, .main h4, .main h5, .main h6,
@@ -88,6 +92,37 @@ st.markdown("""
         font-weight: 700;
     }
 
+    /* Sticky section nav */
+    .section-nav {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: #0d1117;
+        border-bottom: 1px solid #21262d;
+        padding: 0.5rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        justify-content: center;
+    }
+    .section-nav a {
+        display: inline-block;
+        background: #161b22;
+        color: #58a6ff !important;
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        text-decoration: none;
+        border: 1px solid #21262d;
+        transition: background 0.2s, border-color 0.2s;
+    }
+    .section-nav a:hover {
+        background: #21262d;
+        border-color: #58a6ff;
+        color: #79c0ff !important;
+    }
+
     /* Section headers */
     .section-header {
         font-size: 1.5rem;
@@ -97,6 +132,7 @@ st.markdown("""
         padding-bottom: 0.4rem;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        scroll-margin-top: 3.5rem;
     }
 
     /* Experience cards */
@@ -385,11 +421,23 @@ st.markdown(
     "</div>",
     unsafe_allow_html=True,
 )
-
+# --- SECTION NAVIGATION BAR (sticky) ---
+st.markdown(
+    '<div class="section-nav">'
+    '<a href="#education">🎓 Education</a>'
+    '<a href="#projects">🔬 Projects</a>'
+    '<a href="#skills">🛠️ Skills</a>'
+    '<a href="#experience">💼 Experience</a>'
+    '<a href="#patents">💡 Patents</a>'
+    '<a href="#cocurricular">🏆 Co-Curricular</a>'
+    '<a href="#extracurricular">🎯 Extra-Curricular</a>'
+    '</div>',
+    unsafe_allow_html=True,
+)
 # ========================
 # EDUCATION
 # ========================
-st.markdown('<div class="section-header">🎓 Education</div>', unsafe_allow_html=True)
+st.markdown('<div id="education" class="section-header">🎓 Education</div>', unsafe_allow_html=True)
 
 st.markdown("""
 <table class="edu-table">
@@ -408,7 +456,7 @@ st.markdown('<div class="achievement-badge">🏆 <b>All India Rank 32</b> in GAT
 # ========================
 # PROJECTS
 # ========================
-st.markdown('<div class="section-header">🔬 Projects</div>', unsafe_allow_html=True)
+st.markdown('<div id="projects" class="section-header">🔬 Projects</div>', unsafe_allow_html=True)
 
 projects = [
     {
@@ -492,7 +540,7 @@ for i in range(0, len(projects), 2):
 # ========================
 # SKILLS
 # ========================
-st.markdown('<div class="section-header">🛠️ Skills & Certifications</div>', unsafe_allow_html=True)
+st.markdown('<div id="skills" class="section-header">🛠️ Skills & Certifications</div>', unsafe_allow_html=True)
 
 sk1, sk2, sk3 = st.columns(3)
 
@@ -548,7 +596,7 @@ for idx_cw, c in enumerate(coursework):
 # ========================
 # PROFESSIONAL EXPERIENCE
 # ========================
-st.markdown('<div class="section-header">💼 Professional Experience</div>', unsafe_allow_html=True)
+st.markdown('<div id="experience" class="section-header">💼 Professional Experience</div>', unsafe_allow_html=True)
 
 experiences = [
     {
@@ -617,7 +665,7 @@ for exp in experiences:
 # ========================
 # PATENTS
 # ========================
-st.markdown('<div class="section-header">💡 Innovations / Patents</div>', unsafe_allow_html=True)
+st.markdown('<div id="patents" class="section-header">💡 Innovations / Patents</div>', unsafe_allow_html=True)
 
 patents = [
     {
@@ -655,7 +703,7 @@ for pat in patents:
 # ========================
 # ACTIVITIES
 # ========================
-st.markdown('<div class="section-header">🏆 Co-Curricular Activities</div>', unsafe_allow_html=True)
+st.markdown('<div id="cocurricular" class="section-header">🏆 Co-Curricular Activities</div>', unsafe_allow_html=True)
 
 act_col1, act_col2 = st.columns(2)
 
@@ -678,7 +726,7 @@ with act_col2:
     st.markdown("**👨‍🏫 Mentorship**")
     st.markdown("Guided undergraduates in UAV landing gear optimization")
 
-st.markdown('<div class="section-header">🎯 Extra-Curricular Activities</div>', unsafe_allow_html=True)
+st.markdown('<div id="extracurricular" class="section-header">🎯 Extra-Curricular Activities</div>', unsafe_allow_html=True)
 
 extra_col1, extra_col2 = st.columns(2)
 
