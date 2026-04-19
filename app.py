@@ -25,6 +25,12 @@ st.markdown("""
         display: none !important;
     }
 
+    /* Hide sidebar collapse/expand button */
+    [data-testid="stSidebarCollapseButton"],
+    [data-testid="collapsedControl"] {
+        display: none !important;
+    }
+
     /* Dark background everywhere */
     [data-testid="stAppViewContainer"],
     [data-testid="stApp"],
