@@ -13,6 +13,11 @@ st.set_page_config(
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+    .material-symbols-rounded {
+        font-family: 'Material Symbols Rounded' !important;
+    }
 
     /* Hide default Streamlit page navigation */
     [data-testid="stSidebarNav"] {
