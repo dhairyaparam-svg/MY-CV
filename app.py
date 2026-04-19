@@ -94,22 +94,16 @@ st.markdown("""
 
     /* Sticky section nav */
     .section-nav {
-        position: fixed;
+        position: sticky;
         top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
+        z-index: 999;
         background: #0d1117;
         border-bottom: 1px solid #21262d;
-        padding: 0.6rem 1rem;
+        padding: 0.5rem 0;
         display: flex;
         flex-wrap: wrap;
         gap: 0.3rem;
         justify-content: center;
-    }
-    /* Push main content below the fixed nav */
-    [data-testid="stAppViewContainer"] .main .block-container {
-        padding-top: 4rem !important;
     }
     .section-nav a {
         display: inline-block;
@@ -138,7 +132,7 @@ st.markdown("""
         padding-bottom: 0.4rem;
         margin-top: 2rem;
         margin-bottom: 1rem;
-        scroll-margin-top: 4rem;
+        scroll-margin-top: 3.5rem;
     }
 
     /* Experience cards */
