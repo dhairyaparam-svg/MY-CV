@@ -4,7 +4,7 @@ import base64
 
 # --- PAGE CONFIG ---
 st.set_page_config(
-    page_title="Dhairya Dosi | CV",
+    page_title="Curriculum Vitae | Dhairya Dosi",
     page_icon="✈️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -14,6 +14,11 @@ st.set_page_config(
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    /* Hide default Streamlit page navigation */
+    [data-testid="stSidebarNav"] {
+        display: none !important;
+    }
 
     /* Dark background everywhere */
     [data-testid="stAppViewContainer"],
@@ -344,7 +349,7 @@ with st.sidebar:
         "[📚 ResearchGate](https://www.researchgate.net/profile/Dhairya-Dosi-2)"
     )
     st.markdown(
-        "[📸 Professional Highlights](/Professional_Highlights)"
+        "[📸 Pictures/Videos](/Pictures_Videos)"
     )
 
     st.markdown("---")

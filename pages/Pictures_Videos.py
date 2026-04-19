@@ -3,7 +3,7 @@ from pathlib import Path
 import base64
 
 st.set_page_config(
-    page_title="Professional Highlights | Dhairya Dosi",
+    page_title="Pictures/Videos | Dhairya Dosi",
     page_icon="📸",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -13,6 +13,11 @@ st.set_page_config(
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    /* Hide default Streamlit page navigation */
+    [data-testid="stSidebarNav"] {
+        display: none !important;
+    }
 
     [data-testid="stAppViewContainer"],
     [data-testid="stApp"],
@@ -170,8 +175,8 @@ slideshow_images = [
 slideshow_images = [(f, c) for f, c in slideshow_images if (SLIDE_DIR / f).exists()]
 
 # --- HEADER ---
-st.page_link("app.py", label="⬅️ Back to Main Page", icon="🏠")
-st.markdown("# 📸 Pictures that Capture My Interest")
+st.page_link("app.py", label="⬅️ Back to Curriculum Vitae", icon="🏠")
+st.markdown("# 📸 Pictures / Videos")
 st.markdown("*A visual journey and memories — Dhairya Dosi*")
 st.markdown("---")
 
