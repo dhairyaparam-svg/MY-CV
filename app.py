@@ -85,7 +85,7 @@ st.markdown("""
     }
 
     .main .block-container {
-        padding-top: 2rem;
+        padding-top: 3.5rem;
         max-width: 1100px;
     }
     h1, h2, h3 {
@@ -94,12 +94,14 @@ st.markdown("""
 
     /* Sticky section nav */
     .section-nav {
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 999;
+        left: 21rem;          /* aligns with Streamlit's default sidebar width */
+        right: 0;
+        z-index: 100;
         background: #0d1117;
         border-bottom: 1px solid #21262d;
-        padding: 0.5rem 0;
+        padding: 0.45rem 0.5rem;
         display: flex;
         flex-wrap: wrap;
         gap: 0.3rem;
