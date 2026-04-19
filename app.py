@@ -406,134 +406,6 @@ st.markdown('<div class="achievement-badge">🏆 <b>Scholarship for Meritorious 
 st.markdown('<div class="achievement-badge">🏆 <b>All India Rank 32</b> in GATE (AE)-2022 — Scored 742/1000</div>', unsafe_allow_html=True)
 
 # ========================
-# SKILLS
-# ========================
-st.markdown('<div class="section-header">🛠️ Skills & Certifications</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("**🖥️ Software**")
-    for s in ["MATLAB", "SolidWorks", "FreeCAD", "CATIA v5", "SimSolid", "Canva", "Google Workspace"]:
-        st.markdown(f'<span class="skill-tag">{s}</span>', unsafe_allow_html=True)
-
-    st.markdown("")
-    st.markdown("**💻 Languages**")
-    for s in ["Embedded C", "Python", "Arduino"]:
-        st.markdown(f'<span class="skill-tag-alt">{s}</span>', unsafe_allow_html=True)
-
-    st.markdown("")
-    st.markdown("**⚙️ Frameworks**")
-    for s in ["Simulink", "DBSCAN", "Ardupilot", "CUDA", "LaTeX"]:
-        st.markdown(f'<span class="skill-tag-alt">{s}</span>', unsafe_allow_html=True)
-
-with col2:
-    st.markdown("**🔧 Engineering**")
-    for s in ["Product Design", "Prototyping", "Structural Load Analysis", "Conceptual Design", "Computer Vision"]:
-        st.markdown(f'<span class="skill-tag-eng">{s}</span>', unsafe_allow_html=True)
-
-    st.markdown("")
-    st.markdown("**🚀 Aerospace**")
-    for s in ["Aerospace Structures", "GNC", "UAVs", "Flight Testing"]:
-        st.markdown(f'<span class="skill-tag-eng">{s}</span>', unsafe_allow_html=True)
-
-    st.markdown("")
-    st.markdown("**🌟 Core Competencies**")
-    for s in ["Problem Solving", "Creativity", "Mentoring", "IP Management", "Publication Management"]:
-        st.markdown(f'<span class="skill-tag">{s}</span>', unsafe_allow_html=True)
-
-st.markdown("")
-st.markdown("**📜 Certifications**")
-cert_c1, cert_c2, cert_c3 = st.columns(3)
-with cert_c1:
-    st.markdown('<div class="cert-item">Drone Systems and Controls — <em>NPTEL</em></div>', unsafe_allow_html=True)
-with cert_c2:
-    st.markdown('<div class="cert-item">Aerospace Controls and Systems Design — <em>Udemy</em></div>', unsafe_allow_html=True)
-with cert_c3:
-    st.markdown('<div class="cert-item">Aerospace Structures and Materials — <em>TU Delft</em></div>', unsafe_allow_html=True)
-
-st.markdown("")
-st.markdown("**📖 Key Coursework**")
-coursework = [
-    "Approximate Methods of Structural Analysis", "Aeroelasticity",
-    "Aerospace Systems Estimation and Control", "Linear Differential Operators",
-    "Principles of Guidance of Autonomous Vehicles", "Flight Mechanics",
-]
-cw_cols = st.columns(3)
-for i, c in enumerate(coursework):
-    with cw_cols[i % 3]:
-        st.markdown(f"- {c}")
-
-# ========================
-# PROFESSIONAL EXPERIENCE
-# ========================
-st.markdown('<div class="section-header">💼 Professional Experience</div>', unsafe_allow_html=True)
-
-experiences = [
-    {
-        "title": "Program Associate - 2",
-        "org": "Center for Research Commercialization, IIT Gandhinagar",
-        "dates": "Dec 2025 – Present",
-        "bullets": [
-            'Research on Affordable Multirotor systems for <a href="https://dronenavigatorsmc.streamlit.app/" target="_blank">Long-Range Medical Delivery</a>',
-            "Unified Energy-Optimal Trajectory Planning for Electric VTOL Systems Using Direct Shooting and NLP *(IEEE-SPACE 2026)*",
-            "Geometric Path Optimization for UAV Missions with Minimal Battery/HESS Swaps",
-            "Hierarchical Motion Planning Framework for Time-Efficient UAV Navigation Using 3D-GSE and Conical Sampling *(IEEE-SPACE 2026)*",
-            "Optimal guidance of multirotor aircraft using sliding mode control with range-augmented coefficients",
-            "Development of National Center For Research Commercialization Portal (NCRC Portal)",
-        ],
-    },
-    {
-        "title": "Structural Design Intern",
-        "org": "Airbus India Private Limited",
-        "dates": "Jan 2025 – Jul 2025",
-        "bullets": [
-            "Developed 3D-printed prototype of A350 Freighter Main Deck Cargo Door",
-            "Designed Universal Door Stopper concepts",
-            "Introduced proxy folder solution to resolve storage issues in SQCDP",
-            "Automated data extraction from large documents using feature clustering",
-        ],
-    },
-    {
-        "title": "Senior Project Engineer",
-        "org": "RGD Lab, IIT Madras",
-        "dates": "Jun 2024 – Dec 2024",
-        "bullets": [
-            "Developed propulsion and landing gear systems for an 18 kg coastal surveillance UAV",
-            "Designed GNC systems for Smart 155mm Ammunition (details under NDA)",
-        ],
-    },
-    {
-        "title": "Teacher",
-        "org": "SDRK College, Bagidora",
-        "dates": "Nov 2020 – Dec 2021",
-        "bullets": [
-            "Taught high school mathematics; developed public speaking skills",
-        ],
-    },
-    {
-        "title": "Summer Intern",
-        "org": "Indian Air Force",
-        "dates": "Jul 2019 – Aug 2019",
-        "bullets": [
-            "Investigated and resolved overheating issues in MI-35 helicopter laser range finders",
-        ],
-    },
-]
-
-for exp in experiences:
-    bullets_html = "".join(f"<li>{b}</li>" for b in exp["bullets"])
-    st.markdown(
-        f"""<div class="experience-card">
-            <h4>{exp["title"]}</h4>
-            <div class="org">{exp["org"]}</div>
-            <div class="dates">📅 {exp["dates"]}</div>
-            <ul>{bullets_html}</ul>
-        </div>""",
-        unsafe_allow_html=True,
-    )
-
-# ========================
 # PROJECTS
 # ========================
 st.markdown('<div class="section-header">🔬 Projects</div>', unsafe_allow_html=True)
@@ -616,6 +488,131 @@ for i in range(0, len(projects), 2):
                     </div>""",
                     unsafe_allow_html=True,
                 )
+
+# ========================
+# SKILLS
+# ========================
+st.markdown('<div class="section-header">🛠️ Skills & Certifications</div>', unsafe_allow_html=True)
+
+sk1, sk2, sk3 = st.columns(3)
+
+with sk1:
+    st.markdown("**🖥️ Software**")
+    for s in ["MATLAB", "SolidWorks", "FreeCAD", "CATIA v5", "SimSolid", "Canva", "Google Workspace"]:
+        st.markdown(f'<span class="skill-tag">{s}</span>', unsafe_allow_html=True)
+    st.markdown("")
+    st.markdown("**💻 Languages**")
+    for s in ["Embedded C", "Python", "Arduino"]:
+        st.markdown(f'<span class="skill-tag-alt">{s}</span>', unsafe_allow_html=True)
+
+with sk2:
+    st.markdown("**⚙️ Frameworks**")
+    for s in ["Simulink", "DBSCAN", "Ardupilot", "CUDA", "LaTeX"]:
+        st.markdown(f'<span class="skill-tag-alt">{s}</span>', unsafe_allow_html=True)
+    st.markdown("")
+    st.markdown("**🚀 Aerospace**")
+    for s in ["Aerospace Structures", "GNC", "UAVs", "Flight Testing"]:
+        st.markdown(f'<span class="skill-tag-eng">{s}</span>', unsafe_allow_html=True)
+
+with sk3:
+    st.markdown("**🔧 Engineering**")
+    for s in ["Product Design", "Prototyping", "Structural Load Analysis", "Conceptual Design", "Computer Vision"]:
+        st.markdown(f'<span class="skill-tag-eng">{s}</span>', unsafe_allow_html=True)
+    st.markdown("")
+    st.markdown("**🌟 Core Competencies**")
+    for s in ["Problem Solving", "Creativity", "Mentoring", "IP Management", "Publication Management"]:
+        st.markdown(f'<span class="skill-tag">{s}</span>', unsafe_allow_html=True)
+
+st.markdown("")
+st.markdown("**📜 Certifications**")
+cert_c1, cert_c2, cert_c3 = st.columns(3)
+with cert_c1:
+    st.markdown('<div class="cert-item">Drone Systems and Controls — <em>NPTEL</em></div>', unsafe_allow_html=True)
+with cert_c2:
+    st.markdown('<div class="cert-item">Aerospace Controls and Systems Design — <em>Udemy</em></div>', unsafe_allow_html=True)
+with cert_c3:
+    st.markdown('<div class="cert-item">Aerospace Structures and Materials — <em>TU Delft</em></div>', unsafe_allow_html=True)
+
+st.markdown("")
+st.markdown("**📖 Key Coursework**")
+coursework = [
+    "Approximate Methods of Structural Analysis", "Aeroelasticity",
+    "Aerospace Systems Estimation and Control", "Linear Differential Operators",
+    "Principles of Guidance of Autonomous Vehicles", "Flight Mechanics",
+]
+cw_cols = st.columns(3)
+for idx_cw, c in enumerate(coursework):
+    with cw_cols[idx_cw % 3]:
+        st.markdown(f"- {c}")
+
+# ========================
+# PROFESSIONAL EXPERIENCE
+# ========================
+st.markdown('<div class="section-header">💼 Professional Experience</div>', unsafe_allow_html=True)
+
+experiences = [
+    {
+        "title": "Program Associate - 2",
+        "org": "Center for Research Commercialization, IIT Gandhinagar",
+        "dates": "Dec 2025 – Present",
+        "bullets": [
+            'Research on Affordable Multirotor systems for <a href="https://dronenavigatorsmc.streamlit.app/" target="_blank">Long-Range Medical Delivery</a>',
+            "Unified Energy-Optimal Trajectory Planning for Electric VTOL Systems Using Direct Shooting and NLP *(IEEE-SPACE 2026)*",
+            "Geometric Path Optimization for UAV Missions with Minimal Battery/HESS Swaps",
+            "Hierarchical Motion Planning Framework for Time-Efficient UAV Navigation Using 3D-GSE and Conical Sampling *(IEEE-SPACE 2026)*",
+            "Optimal guidance of multirotor aircraft using sliding mode control with range-augmented coefficients",
+            "Development of National Center For Research Commercialization Portal (NCRC Portal)",
+        ],
+    },
+    {
+        "title": "Structural Design Intern",
+        "org": "Airbus India Private Limited",
+        "dates": "Jan 2025 – Jul 2025",
+        "bullets": [
+            "Developed 3D-printed prototype of A350 Freighter Main Deck Cargo Door",
+            "Designed Universal Door Stopper concepts",
+            "Introduced proxy folder solution to resolve storage issues in SQCDP",
+            "Automated data extraction from large documents using feature clustering",
+        ],
+    },
+    {
+        "title": "Senior Project Engineer",
+        "org": "RGD Lab, IIT Madras",
+        "dates": "Jun 2024 – Dec 2024",
+        "bullets": [
+            "Developed propulsion and landing gear systems for an 18 kg coastal surveillance UAV",
+            "Designed GNC systems for Smart 155mm Ammunition (details under NDA)",
+        ],
+    },
+    {
+        "title": "Teacher",
+        "org": "SDRK College, Bagidora",
+        "dates": "Nov 2020 – Dec 2021",
+        "bullets": [
+            "Taught high school mathematics; developed public speaking skills",
+        ],
+    },
+    {
+        "title": "Summer Intern",
+        "org": "Indian Air Force",
+        "dates": "Jul 2019 – Aug 2019",
+        "bullets": [
+            "Investigated and resolved overheating issues in MI-35 helicopter laser range finders",
+        ],
+    },
+]
+
+for exp in experiences:
+    bullets_html = "".join(f"<li>{b}</li>" for b in exp["bullets"])
+    st.markdown(
+        f"""<div class="experience-card">
+            <h4>{exp["title"]}</h4>
+            <div class="org">{exp["org"]}</div>
+            <div class="dates">📅 {exp["dates"]}</div>
+            <ul>{bullets_html}</ul>
+        </div>""",
+        unsafe_allow_html=True,
+    )
 
 # ========================
 # PATENTS
