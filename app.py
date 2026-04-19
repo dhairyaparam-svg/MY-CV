@@ -92,16 +92,21 @@ st.markdown("""
         font-weight: 700;
     }
 
-    /* Sticky section nav */
+    /* Hide Streamlit's own top toolbar (we replace it with our nav) */
+    header[data-testid="stHeader"] {
+        display: none !important;
+    }
+
+    /* Fixed section nav — full viewport width, topmost layer */
     .section-nav {
         position: fixed;
         top: 0;
-        left: 21rem;          /* aligns with Streamlit's default sidebar width */
+        left: 0;
         right: 0;
-        z-index: 100;
+        z-index: 9999999;
         background: #0d1117;
         border-bottom: 1px solid #21262d;
-        padding: 0.45rem 0.5rem;
+        padding: 0.4rem 0.5rem;
         display: flex;
         flex-wrap: wrap;
         gap: 0.3rem;
