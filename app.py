@@ -92,20 +92,20 @@ st.markdown("""
         font-weight: 700;
     }
 
-    /* Sticky section nav - attached to body via JS */
+    /* Sticky section nav */
     .section-nav {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 99999 !important;
-        background: #0d1117 !important;
-        border-bottom: 1px solid #21262d !important;
-        padding: 0.6rem 1rem !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 0.3rem !important;
-        justify-content: center !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: #0d1117;
+        border-bottom: 1px solid #21262d;
+        padding: 0.6rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        justify-content: center;
     }
     /* Push main content below the fixed nav */
     [data-testid="stAppViewContainer"] .main .block-container {
@@ -427,52 +427,19 @@ st.markdown(
     "</div>",
     unsafe_allow_html=True,
 )
-# --- SECTION NAVIGATION BAR (fixed via JS) ---
-st.markdown("""
-<div id="section-nav-source" style="display:none;">
-    <a href="#education">🎓 Education</a>
-    <a href="#projects">🔬 Projects</a>
-    <a href="#skills">🛠️ Skills</a>
-    <a href="#experience">💼 Experience</a>
-    <a href="#patents">💡 Patents</a>
-    <a href="#cocurricular">🏆 Co-Curricular</a>
-    <a href="#extracurricular">🎯 Extra-Curricular</a>
-</div>
-<script>
-(function() {
-    // Wait for DOM to be ready, then move nav to body
-    function initNav() {
-        if (document.getElementById('fixed-section-nav')) return;
-        var source = document.getElementById('section-nav-source');
-        if (!source) return;
-        var nav = document.createElement('div');
-        nav.id = 'fixed-section-nav';
-        nav.className = 'section-nav';
-        nav.innerHTML = source.innerHTML;
-        document.body.appendChild(nav);
-
-        // Make anchor links scroll the Streamlit container
-        nav.querySelectorAll('a').forEach(function(a) {
-            a.addEventListener('click', function(e) {
-                e.preventDefault();
-                var id = this.getAttribute('href').substring(1);
-                var target = document.getElementById(id);
-                if (target) {
-                    target.scrollIntoView({behavior: 'smooth', block: 'start'});
-                }
-            });
-        });
-    }
-    // Retry until Streamlit finishes rendering
-    var attempts = 0;
-    var timer = setInterval(function() {
-        initNav();
-        attempts++;
-        if (document.getElementById('fixed-section-nav') || attempts > 50) clearInterval(timer);
-    }, 200);
-})();
-</script>
-""", unsafe_allow_html=True)
+# --- SECTION NAVIGATION BAR (sticky) ---
+st.markdown(
+    '<div class="section-nav">'
+    '<a href="#education">🎓 Education</a>'
+    '<a href="#projects">🔬 Projects</a>'
+    '<a href="#skills">🛠️ Skills</a>'
+    '<a href="#experience">💼 Experience</a>'
+    '<a href="#patents">💡 Patents</a>'
+    '<a href="#cocurricular">🏆 Co-Curricular</a>'
+    '<a href="#extracurricular">🎯 Extra-Curricular</a>'
+    '</div>',
+    unsafe_allow_html=True,
+)
 # ========================
 # EDUCATION
 # ========================
