@@ -460,7 +460,7 @@ projects = [
             "Designed a short-haul air taxi and determined all aerodynamic, inertial, propulsive, and control parameters. "
             "Used linearized state-space methods to simulate aircraft motion with open-source model on GitHub."
         ),
-        "pub": 'Paper published in IJIRSET — DOI: <a href="https://doi.org/10.15680/IJIRSET.2023.1201027" target="_blank">10.15680/IJIRSET.2023.1201027</a>',
+        "pub": 'Paper published in IJIRSET — DOI: <a href="https://www.ijirset.com/upload/2023/january/27_Design_NC1.pdf" target="_blank">10.15680/IJIRSET.2023.1201027</a>',
     },
     {
         "title": "Solution to Overheating of Laser Range Finders",
