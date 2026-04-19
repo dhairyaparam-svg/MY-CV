@@ -421,7 +421,7 @@ st.markdown(
 )
 st.markdown(
     '<div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:1rem;">'
-    '<a class="contact-link" href="mailto:dhairya.param@iitgn.ac.in" target="_blank">📧 Email</a>'
+    '<a class="contact-link" href="mailto:dhairya.param@iitgn.ac.in">📧 Email</a>'
     '<a class="contact-link" href="https://in.linkedin.com/in/dhairya-dosi-b9040112b" target="_blank">🔗 LinkedIn</a>'
     '<a class="contact-link" href="https://github.com/dhairyaparam-svg" target="_blank">💻 GitHub</a>'
     '<a class="contact-link" href="https://www.researchgate.net/profile/Dhairya-Dosi-2" target="_blank">📚 ResearchGate</a>'
