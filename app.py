@@ -611,10 +611,10 @@ experiences = [
         "org": "Center for Research Commercialization, IIT Gandhinagar",
         "dates": "Dec 2025 – Present",
         "bullets": [
-            'Research on Affordable Multirotor systems for <a href="https://dronenavigatorsmc.streamlit.app/" target="_blank">Long-Range Medical Delivery</a>',
-            "Unified Energy-Optimal Trajectory Planning for Electric VTOL Systems Using Direct Shooting and NLP *(IEEE-SPACE 2026)*",
+            'Research on Affordable Multirotor systems for <a href="https://dronenavigatorsmc.streamlit.app/" target="_blank">Long-Range Medical Delivery(Publication Pending)</a>',
+            "Unified Energy-Optimal Trajectory Planning for Electric VTOL Systems Using Direct Shooting and NLP *(Accepted for publication in IEEE-SPACE 2026)*",
             "Geometric Path Optimization for UAV Missions with Minimal Battery/HESS Swaps",
-            "Hierarchical Motion Planning Framework for Time-Efficient UAV Navigation Using 3D-GSE and Conical Sampling *(IEEE-SPACE 2026)*",
+            "Hierarchical Motion Planning Framework for Time-Efficient UAV Navigation Using 3D-GSE and Conical Sampling *(Accepted for publication in IEEE-SPACE 2026)*",
             "Optimal guidance of multirotor aircraft using sliding mode control with range-augmented coefficients",
             "Development of National Center For Research Commercialization Portal (NCRC Portal)",
         ],
