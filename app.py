@@ -499,7 +499,7 @@ projects = [
             'Enhanced and implemented guidance algorithms for precision soft landing (based on DOI: <a href="https://doi.org/10.2514/1.A35412" target="_blank">10.2514/1.A35412</a>). '
             "Developed range-dependent sliding mode constants to minimize propellant consumption."
         ),
-        "pub": '<a href="https://slidingmodeguidence.streamlit.app/" target="_blank">Live Demo</a>',
+        "pub": '<a href="https://slidingmodeguidence.streamlit.app/" target="_blank">Live Demo</a>''<a href="https://www.youtube.com/watch?v=kwSaPfujKPA&t=329s" target="_blank">Youtube Video</a>''<a href="https://doi.org/10.13140/RG.2.2.32129.21600" target="_blank">Publication</a>',
     },
     {
         "title": "PB-2 Rayleigh-Ritz Method for Arbitrary Plate Analysis",
@@ -611,7 +611,7 @@ experiences = [
         "org": "Center for Research Commercialization, IIT Gandhinagar",
         "dates": "Dec 2025 – Present",
         "bullets": [
-            'Research on Affordable Multirotor systems for <a href="https://dronenavigatorsmc.streamlit.app/" target="_blank">Long-Range Medical Delivery(Publication Pending)</a>',
+            'Research on Affordable Multirotor systems for <a href="https://dronenavigatorsmc.streamlit.app/" target="_blank">Long-Range Medical Delivery(Publication Pending)</a>''<a href="https://www.youtube.com/watch?v=kwSaPfujKPA&t=329s" target="_blank">Youtube Video</a>''<a href="https://doi.org/10.13140/RG.2.2.32129.21600" target="_blank">Publication</a>',
             "Unified Energy-Optimal Trajectory Planning for Electric VTOL Systems Using Direct Shooting and NLP *(Accepted for publication in IEEE-SPACE 2026)*",
             "Geometric Path Optimization for UAV Missions with Minimal Battery/HESS Swaps",
             "Hierarchical Motion Planning Framework for Time-Efficient UAV Navigation Using 3D-GSE and Conical Sampling *(Accepted for publication in IEEE-SPACE 2026)*",
